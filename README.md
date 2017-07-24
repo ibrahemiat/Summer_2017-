@@ -1,2 +1,8 @@
-# Summer_2017-
-All the intern work I did for the 2017 summer 
+# Face++ to identify a person
+
+#install opencv
+```
+$ sudo apt-get update
+$ sudo apt-get upgrade
+
+```

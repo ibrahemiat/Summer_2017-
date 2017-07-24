@@ -64,12 +64,14 @@ while block == True:
 
     access = False
 
-    picture = "/Users/Robert/test/capture.jpg"
+    path = os.getcwd()
+    picture = path + "/test/capture.jpg"
 
-    pictures_faces = os.listdir("/Users/Robert/test/pictures_faces")
+    pictures_faces_path = path + "/test/pictures_faces"
+    pictures_faces = os.listdir(pictures_faces_path)
 
     for face in pictures_faces:
-        isPerson = compare(picture, "/Users/Robert/test/pictures_faces/{0}".format(face))
+        isPerson = compare(picture, path + "/test/pictures_faces/{0}".format(face))
         if isPerson:
             access = True
 

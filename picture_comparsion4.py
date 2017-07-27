@@ -31,8 +31,8 @@ def getFilenamesAndClasses(dataset_dir_raw):
 block = True
 
 while block == True:
-    print "Welcome to the Lab of Computer Fusion located on the sixth floor of the engineering building!"
-    print "To enter, your face must be registered in the database. After the camera shows up, press 'q' to see if you can enter."
+    print ("Welcome")
+    print ("To enter, your face must be registered in the database. After the camera shows up, press 'q' to see if you can enter.")
 
     cap = cv2.VideoCapture(0)
 
@@ -65,7 +65,7 @@ while block == True:
     access = False
 
     path = os.getcwd()
-    picture = path + "/test/capture.jpg"
+    picture = path + "/capture.jpg"
 
     pictures_faces_path = path + "/test/pictures_faces"
     pictures_faces = os.listdir(pictures_faces_path)
@@ -76,7 +76,7 @@ while block == True:
             access = True
 
     if access == True:
-        print "Welcome to the Lab of Computer Fusion, {0}.".format(face) 
+        print ", {0}.".format(face)
         block = False
     else:
         print "Your face isn't in the database right now. Would you like to add it?"
@@ -99,7 +99,7 @@ while block == True:
                 camera = cv2.VideoCapture(camera_port)
                 time.sleep(5.0)
                 return_value, image = camera.read()
-                path = '/Users/Robert/test/pictures_faces/'
+                path = path + '/test/pictures_faces/'
                 cv2.imwrite(str(path) + "{0}.png".format(person_name), image)
                 del(camera)
 

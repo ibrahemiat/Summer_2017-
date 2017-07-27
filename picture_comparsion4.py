@@ -74,6 +74,7 @@ while block == True:
         isPerson = compare(picture, path + "/test/pictures_faces/{0}".format(face))
         if isPerson:
             access = True
+            break
 
     if access == True:
         print ", {0}.".format(face)

@@ -31,8 +31,8 @@ def getFilenamesAndClasses(dataset_dir_raw):
 block = True
 
 while block == True:
-    print ("Welcome")
-    print ("To enter, your face must be registered in the database. After the camera shows up, press 'q' to see if you can enter.")
+    print "Welcome"
+    print "To enter, your face must be registered in the database. After the camera shows up, press 'q' to see if you can enter."
 
     cap = cv2.VideoCapture(0)
 
